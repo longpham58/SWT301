@@ -12,6 +12,6 @@
     <description>OSCE project – parent for selenium-tests</description>
 
     <modules>
-        <module>selenium-tests</module>
+        <module>Lab4/selenium-tests</module>
     </modules>
 </project>
