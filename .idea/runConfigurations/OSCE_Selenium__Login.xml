@@ -1,0 +1,47 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="OSCE Selenium – Login" type="JUnit" factoryName="JUnit">
+    <module name="osce-selenium-tests" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="TEST_CLASS_NAME" value="com.osce.LoginTests" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/selenium-tests" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+  <configuration default="false" name="OSCE Selenium – Setup Exam" type="JUnit" factoryName="JUnit">
+    <module name="osce-selenium-tests" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="TEST_CLASS_NAME" value="com.osce.SetupExamTests" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/selenium-tests" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+  <configuration default="false" name="OSCE Selenium – Student List" type="JUnit" factoryName="JUnit">
+    <module name="osce-selenium-tests" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="TEST_CLASS_NAME" value="com.osce.StudentListTests" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/selenium-tests" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+  <configuration default="false" name="OSCE Selenium – Account Examiner" type="JUnit" factoryName="JUnit">
+    <module name="osce-selenium-tests" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="TEST_CLASS_NAME" value="com.osce.AccountExaminerTests" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/selenium-tests" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+  <configuration default="false" name="OSCE Selenium – All" type="JUnit" factoryName="JUnit">
+    <module name="osce-selenium-tests" />
+    <option name="TEST_OBJECT" value="package" />
+    <option name="PACKAGE_NAME" value="com.osce" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/selenium-tests" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,460 @@
+/* Background image: update this single line to change image */
+:root {
+  --login-bg-url: url("https://navigates.vn/wp-content/uploads/2023/05/Co-so-vat-chat-Dai-hoc-Phan-Chau-Trinh5.jpg");
+}
+
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+  background-color: #0b1220;
+  background-image: var(--login-bg-url);
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.login-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 12, 20, 0.45);
+  backdrop-filter: blur(8px);
+  z-index: 0;
+}
+
+.login-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 100%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  align-items: center;
+}
+
+.welcome-card {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-content {
+  width: min(420px, 100%);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+  box-shadow: none;
+  animation: fadeIn 150ms ease-out;
+}
+
+.welcome-text h1 {
+  font-size: 54px;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  text-align: center;
+  max-width: none;
+  text-shadow: 0 10px 24px rgba(15, 23, 42, 0.35);
+}
+
+.welcome-text p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  text-align: center;
+  max-width: none;
+  text-shadow: 0 6px 18px rgba(15, 23, 42, 0.3);
+}
+
+.welcome-content {
+  display: grid;
+  gap: 10px;
+}
+
+.login-card {
+  width: min(420px, 100%);
+  justify-self: end;
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
+  animation: fadeIn 150ms ease-out;
+}
+
+.login-form {
+  display: grid;
+  gap: 18px;
+}
+
+.form-header {
+  text-align: center;
+}
+
+.form-header h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.form-header p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.input-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.input-field:focus-within {
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+.input-icon {
+  flex-shrink: 0;
+  width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  pointer-events: none;
+}
+
+.input-icon svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.input-field input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 44px 0 12px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.input-field input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.input-field input:focus {
+  outline: none;
+}
+
+.input-action {
+  position: absolute;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: #111111;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-action:hover {
+  color: #000000;
+  text-shadow: none;
+}
+
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forgot-link {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  color: #ffffff;
+}
+
+.form-error {
+  font-size: 12px;
+  color: #ffd4d4;
+  text-align: center;
+}
+
+.form-success {
+  font-size: 12px;
+  color: #d4ffd4;
+  text-align: center;
+}
+
+.checkbox-group {
+  display: grid;
+  gap: 8px;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.checkbox input {
+  width: 14px;
+  height: 14px;
+  accent-color: #4f7cff;
+}
+
+.login-button {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: #3b6cff;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.login-button:hover {
+  background: #2f5ff2;
+}
+
+.login-button:active {
+  transform: translateY(1px);
+}
+
+.login-button:disabled {
+  cursor: not-allowed;
+  background: rgba(59, 108, 255, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .login-shell {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .login-card {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-page {
+    padding: 32px 16px;
+  }
+
+  .welcome-content,
+  .login-card {
+    width: 100%;
+    padding: 24px;
+  }
+}
+/* Forgot Password Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: #111827;
+}
+
+.modal-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.modal-content p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.modal-content .form-group {
+  margin-bottom: 18px;
+}
+
+.modal-content label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.modal-content input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.modal-content input:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  border-left: 3px solid #dc2626;
+}
+
+.success-message {
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  border-left: 3px solid #16a34a;
+}
+
+.modal-button {
+  width: 100%;
+  padding: 10px 16px;
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.modal-button:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.modal-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.modal-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.success-content {
+  text-align: center;
+}
+
+.success-content h3 {
+  font-size: 24px;
+  color: #16a34a;
+  margin-bottom: 12px;
+}
+
+.success-content p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 24px;
+  }
+
+  .modal-content h3 {
+    font-size: 18px;
+  }
+}

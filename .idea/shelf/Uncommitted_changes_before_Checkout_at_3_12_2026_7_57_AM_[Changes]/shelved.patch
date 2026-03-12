@@ -1,0 +1,147 @@
+Index: react-app/frontend/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\r\n<html lang=\"vi\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <link rel=\"icon\" type=\"image/png\" href=\"https://hrchannels.com/Upload/avatar/20220905/170144149_logo.png\" />\r\n    <title>OSCE</title>\r\n  </head>\r\n  <body>\r\n    <div id=\"root\"></div>\r\n    <script type=\"module\" src=\"/src/main.tsx\"></script>\r\n  </body>\r\n</html>\r\n
+===================================================================
+diff --git a/react-app/frontend/index.html b/react-app/frontend/index.html
+--- a/react-app/frontend/index.html	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ b/react-app/frontend/index.html	(date 1773197578088)
+@@ -3,6 +3,9 @@
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+     <link rel="icon" type="image/png" href="https://hrchannels.com/Upload/avatar/20220905/170144149_logo.png" />
+     <title>OSCE</title>
+   </head>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_24\" default=\"true\" project-jdk-name=\"24\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ b/.idea/misc.xml	(date 1773202735137)
+@@ -1,5 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/selenium-tests/pom.xml" />
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="24" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+Index: react-app/frontend/src/styles/managescore.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* =====================================\r\n   VARIABLES\r\n===================================== */\r\n:root {\r\n  --font-family: \"Roboto\", Arial, sans-serif;\r\n\r\n  --color-primary: #1e88e5;\r\n  --color-primary-dark: #1565c0;\r\n  --color-success: #43a047;\r\n\r\n  --color-bg: #f5f7fa;\r\n  --color-surface: #ffffff;\r\n  --color-border: #e0e0e0;\r\n  --color-border-light: #eeeeee;\r\n  --color-muted: #888888;\r\n\r\n  --radius-sm: 6px;\r\n  --radius-md: 10px;\r\n  --radius-pill: 20px;\r\n\r\n  --space-xs: 6px;\r\n  --space-sm: 8px;\r\n  --space-md: 12px;\r\n  --space-lg: 16px;\r\n}\r\n\r\n/* =====================================\r\n   BASE\r\n===================================== */\r\nbody {\r\n  margin: 0;\r\n  font-family: var(--font-family);\r\n  background: var(--color-bg);\r\n  color: #222;\r\n}\r\n\r\n/* =====================================\r\n   PAGE LAYOUT (95vh FIXED)\r\n===================================== */\r\n.score-manage-page {\r\n  padding: var(--space-lg);\r\n  height: 93vh;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.score-manage-grid {\r\n  display: grid;\r\n  gap: var(--space-lg);\r\n  grid-template-columns: 1.6fr 1fr;\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 0;\r\n}\r\n\r\n/* =====================================\r\n   LEFT COLUMN\r\n===================================== */\r\n.score-left {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: var(--space-lg);\r\n  height: 100%;\r\n  min-height: 0;\r\n}\r\n\r\n/* =====================================\r\n   HEADER\r\n===================================== */\r\n.student-header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.pill.primary {\r\n  background: var(--color-primary);\r\n  color: #fff;\r\n  border: none;\r\n  padding: var(--space-sm) var(--space-lg);\r\n  border-radius: var(--radius-pill);\r\n  cursor: pointer;\r\n  font-weight: 500;\r\n  transition: 0.2s ease;\r\n}\r\n\r\n.pill.primary:hover {\r\n  background: var(--color-primary-dark);\r\n}\r\n\r\n/* =====================================\r\n   FILTER\r\n===================================== */\r\n.subject-filter select {\r\n  padding: var(--space-xs) 10px;\r\n  border-radius: var(--radius-sm);\r\n  border: 1px solid var(--color-border);\r\n  font-size: 14px;\r\n}\r\n\r\n/* =====================================\r\n   TABLE WRAPPER (ONLY THIS SCROLLS)\r\n===================================== */\r\n.student-table-wrap {\r\n  flex: 1;\r\n  min-height: 0;\r\n  overflow-y: auto;\r\n  overflow-x: hidden;\r\n\r\n  border: 1px solid var(--color-border);\r\n  border-radius: var(--radius-md);\r\n  background: var(--color-surface);\r\n}\r\n\r\n/* =====================================\r\n   TABLE\r\n===================================== */\r\n.student-table {\r\n  width: 100%;\r\n  border-collapse: collapse;\r\n  font-size: 14px;\r\n}\r\n\r\n.student-table thead {\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 2;\r\n}\r\n\r\n.student-table th {\r\n  background: var(--color-primary);\r\n  color: #fff;\r\n  padding: var(--space-sm);\r\n  text-align: left;\r\n  font-weight: 500;\r\n}\r\n\r\n.student-table td {\r\n  padding: var(--space-sm);\r\n  border-bottom: 1px solid var(--color-border-light);\r\n}\r\n\r\n.student-table tr {\r\n  cursor: pointer;\r\n  transition: background 0.15s ease;\r\n}\r\n\r\n.student-table tr:hover {\r\n  background: #f2f8ff;\r\n}\r\n\r\n.student-table tr.active {\r\n  background: #e3f2fd;\r\n}\r\n\r\n/* =====================================\r\n   EXPORT BUTTON\r\n===================================== */\r\n.export-btn {\r\n  align-self: flex-start;\r\n  background: var(--color-success);\r\n  color: #fff;\r\n  border: none;\r\n  border-radius: var(--radius-sm);\r\n  padding: var(--space-xs) var(--space-md);\r\n  cursor: pointer;\r\n  font-size: 13px;\r\n  transition: 0.2s ease;\r\n}\r\n\r\n.export-btn:hover {\r\n  opacity: 0.9;\r\n}\r\n\r\n/* =====================================\r\n   RIGHT PANEL\r\n===================================== */\r\n.score-panel {\r\n  background: var(--color-surface);\r\n  border: 1px solid var(--color-border);\r\n  border-radius: var(--radius-md);\r\n  padding: var(--space-lg);\r\n\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: var(--space-lg);\r\n\r\n  height: 100%;\r\n  min-height: 0;\r\n  \r\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);\r\n  overflow-y: auto;\r\n}\r\n\r\n/* =====================================\r\n   VIDEO BOX\r\n===================================== */\r\n.video-box {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  min-height: 140px;\r\n\r\n  border-radius: var(--radius-md);\r\n  font-size: 48px;\r\n  color: var(--color-muted);\r\n\r\n  background: linear-gradient(135deg, #f0f4f8, #e9ecf0);\r\n  border: 1px solid #d9e3eb;\r\n  transition: 0.2s ease;\r\n}\r\n\r\n.video-box:hover {\r\n  background: linear-gradient(135deg, #e8f2ff, #e0ebf7);\r\n  border-color: var(--color-primary);\r\n}\r\n\r\n/* =====================================\r\n   DETAIL CARD\r\n===================================== */\r\n.detail-card {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 12px;\r\n}\r\n\r\n/* =====================================\r\n   FORM FIELDS\r\n===================================== */\r\n.detail-fields {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 12px;\r\n  padding: 10px 0;\r\n  border-top: 1px solid var(--color-border);\r\n  border-bottom: 1px solid var(--color-border);\r\n\r\n}\r\n\r\n.form-row {\r\n  display: grid;\r\n  grid-template-columns: 120px 1fr;\r\n  column-gap: 16px;\r\n  align-items: center;\r\n  /* labels right-aligned, values left-aligned */\r\n}\r\n\r\n.form-row label {\r\n  text-align: right;\r\n}\r\n\r\n.form-row div,\r\n.form-row input,\r\n.form-row textarea {\r\n  text-align: left;\r\n}\r\n\r\n.form-row label {\r\n  font-weight: 600;\r\n  font-size: 13px;\r\n}\r\n\r\n.form-row div {\r\n  font-size: 14px;\r\n  font-weight: 500;\r\n}\r\n\r\n.form-row input,\r\n.form-row textarea {\r\n  width: 100%;\r\n  padding: 6px 8px;\r\n  border: 1px solid var(--color-border);\r\n  border-radius: var(--radius-sm);\r\n  font-size: 13px;\r\n  font-family: inherit;\r\n  transition: 0.2s;\r\n}\r\n\r\n.form-row input:focus,\r\n.form-row textarea:focus {\r\n  outline: none;\r\n  border-color: var(--color-primary);\r\n  box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.15);\r\n}\r\n\r\n.form-row input:disabled,\r\n.form-row textarea:disabled {\r\n  background: #f5f5f5;\r\n  color: #999;\r\n  cursor: not-allowed;\r\n}\r\n\r\n/* =====================================\r\n   ACTION BUTTONS\r\n===================================== */\r\n.detail-actions {\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  gap: var(--space-sm);\r\n}\r\n\r\n.btn {\r\n  padding: var(--space-sm) var(--space-md);\r\n  border-radius: var(--radius-sm);\r\n  border: none;\r\n  font-size: 13px;\r\n  font-weight: 500;\r\n  cursor: pointer;\r\n  transition: 0.2s ease;\r\n}\r\n\r\n.btn.primary {\r\n  background: var(--color-primary);\r\n  color: #fff;\r\n}\r\n\r\n.btn.primary:hover {\r\n  background: var(--color-primary-dark);\r\n}\r\n\r\n.btn:hover {\r\n  opacity: 0.9;\r\n}
+===================================================================
+diff --git a/react-app/frontend/src/styles/managescore.css b/react-app/frontend/src/styles/managescore.css
+--- a/react-app/frontend/src/styles/managescore.css	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ b/react-app/frontend/src/styles/managescore.css	(date 1773197580671)
+@@ -2,7 +2,7 @@
+    VARIABLES
+ ===================================== */
+ :root {
+-  --font-family: "Roboto", Arial, sans-serif;
++  --font-family: var(--font-sans);
+ 
+   --color-primary: #1e88e5;
+   --color-primary-dark: #1565c0;
+Index: .idea/OSCE.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+===================================================================
+diff --git a/.idea/OSCE.iml b/.idea/OSCE.iml
+--- a/.idea/OSCE.iml	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ b/.idea/OSCE.iml	(date 1773202423676)
+@@ -2,8 +2,12 @@
+ <module type="JAVA_MODULE" version="4">
+   <component name="NewModuleRootManager" inherit-compiler-output="true">
+     <exclude-output />
+-    <content url="file://$MODULE_DIR$" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/selenium-tests/src/test/java" isTestSource="true" />
++    </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="Maven: junit:junit:4.13.2" level="project" />
++    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-java:4.15.0" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: react-app/frontend/src/styles/dashboard.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.dashboard-home-greeting h2 {\r\n  font-family: 'Roboto', sans-serif;\r\n  font-size: 64px;\r\n  font-weight: 600;\r\n  color: #1f2937;\r\n  text-align: center;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 100%;\r\n  place-items: center;\r\n  display: grid;\r\n}\r\n\r\n.dashboard-page {\r\n  min-height: 100vh;\r\n  display: grid;\r\n  grid-template-columns: 220px 1fr;\r\n  gap: 24px;\r\n  padding: 24px;\r\n}\r\n\r\n.dashboard-sidebar {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 24px;\r\n}\r\n\r\n.sidebar-lang {\r\n  display: flex;\r\n  gap: 6px;\r\n  margin-bottom: 12px;\r\n}\r\n.sidebar-lang .lang-btn {\r\n  padding: 6px 12px;\r\n  border-radius: 6px;\r\n  border: 1px solid #d1d5db;\r\n  background: #fff;\r\n  color: #374151;\r\n  cursor: pointer;\r\n  font-size: 12px;\r\n  font-weight: 600;\r\n}\r\n.sidebar-lang .lang-btn.active {\r\n  background: #1e88e5;\r\n  border-color: #1e88e5;\r\n  color: #fff;\r\n}\r\n.sidebar-logout {\r\n  align-self: flex-start;\r\n  padding: 8px 14px;\r\n  border-radius: 6px;\r\n  border: 1px solid #d1d5db;\r\n  background: #ffffff;\r\n  color: #111827;\r\n  cursor: pointer;\r\n}\r\n\r\n.sidebar-profile {\r\n  display: grid;\r\n  gap: 12px;\r\n  justify-items: center;\r\n  text-align: center;\r\n}\r\n\r\n.profile-avatar {\r\n  width: 56px;\r\n  height: 56px;\r\n  border-radius: 14px;\r\n  background: #ffffff;\r\n  border: 1px solid #e5e7eb;\r\n  display: grid;\r\n  place-items: center;\r\n  font-size: 22px;\r\n}\r\n\r\n.profile-info {\r\n  display: grid;\r\n  gap: 2px;\r\n}\r\n\r\n.profile-name {\r\n  font-weight: 600;\r\n  font-size: 13px;\r\n}\r\n\r\n.profile-user {\r\n  font-size: 12px;\r\n  color: #6b7280;\r\n}\r\n\r\n.sidebar-nav {\r\n  display: grid;\r\n  gap: 10px;\r\n}\r\n\r\n.nav-item {\r\n  border: 1px solid #e5e7eb;\r\n  background: #ffffff;\r\n  padding: 8px 12px;\r\n  border-radius: 8px;\r\n  text-align: left;\r\n  cursor: pointer;\r\n  font-size: 13px;\r\n  color: #374151;\r\n}\r\n\r\n.nav-item.active {\r\n  background: #e0f2fe;\r\n  border-color: #93c5fd;\r\n  color: #1d4ed8;\r\n}\r\n\r\n.dashboard-main {\r\n  min-width: 0;\r\n  width: 100%;\r\n}\r\n\r\n/* Trang Tổng quan */\r\n.overview-page {\r\n  width: 100%;\r\n  min-width: 0;\r\n  background: #ffffff;\r\n  border-radius: 12px;\r\n  padding: 24px 28px;\r\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);\r\n}\r\n\r\n.overview-header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.overview-title {\r\n  margin: 0 0 8px 0;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  color: #1f2937;\r\n  line-height: 1.3;\r\n}\r\n\r\n.overview-subtitle {\r\n  margin: 0;\r\n  font-size: 14px;\r\n  font-weight: 400;\r\n  color: #6b7280;\r\n  line-height: 1.5;\r\n}\r\n\r\n.overview-metrics {\r\n  display: grid;\r\n  grid-template-columns: repeat(4, minmax(0, 1fr));\r\n  gap: 16px;\r\n  margin-bottom: 24px;\r\n}\r\n\r\n.metric-card {\r\n  border-radius: 14px;\r\n  padding: 16px 18px;\r\n  background: #f3f4f6;\r\n  display: grid;\r\n  gap: 6px;\r\n}\r\n\r\n.metric-card .metric-label {\r\n  font-size: 13px;\r\n  color: #6b7280;\r\n}\r\n\r\n.metric-card .metric-value {\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  color: #111827;\r\n}\r\n\r\n.metric-card .metric-desc {\r\n  font-size: 12px;\r\n  color: #6b7280;\r\n}\r\n\r\n.metric-exam {\r\n  background: #eff6ff;\r\n}\r\n\r\n.metric-students {\r\n  background: #ecfdf3;\r\n}\r\n\r\n.metric-rooms {\r\n  background: #ecfeff;\r\n}\r\n\r\n.metric-finished {\r\n  background: #fefce8;\r\n}\r\n\r\n.overview-layout {\r\n  display: grid;\r\n  grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.2fr);\r\n  gap: 24px;\r\n}\r\n\r\n.overview-left,\r\n.overview-right {\r\n  min-width: 0;\r\n}\r\n\r\n.section-header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  margin-bottom: 12px;\r\n}\r\n\r\n.section-header h2 {\r\n  margin: 0;\r\n  font-size: 16px;\r\n  font-weight: 600;\r\n  color: #111827;\r\n}\r\n\r\n.link-button {\r\n  border: none;\r\n  padding: 0;\r\n  background: none;\r\n  font-size: 13px;\r\n  color: #2563eb;\r\n  cursor: pointer;\r\n}\r\n\r\n.link-button:hover {\r\n  text-decoration: underline;\r\n}\r\n\r\n.room-grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(3, minmax(0, 1fr));\r\n  gap: 16px;\r\n}\r\n\r\n.room-card {\r\n  border-radius: 16px;\r\n  padding: 14px 14px 12px;\r\n  background: #f9fafb;\r\n  border: 1px solid #e5e7eb;\r\n  display: grid;\r\n  gap: 10px;\r\n}\r\n\r\n.room-card-header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  font-size: 11px;\r\n}\r\n\r\n.room-status {\r\n  padding: 4px 10px;\r\n  border-radius: 999px;\r\n  font-weight: 600;\r\n}\r\n\r\n.room-status-running {\r\n  background: #dcfce7;\r\n  color: #166534;\r\n}\r\n\r\n.room-status-waiting {\r\n  background: #fef9c3;\r\n  color: #854d0e;\r\n}\r\n\r\n.room-slot {\r\n  color: #6b7280;\r\n}\r\n\r\n.room-card-body {\r\n  display: grid;\r\n  gap: 4px;\r\n}\r\n\r\n.room-name {\r\n  margin: 0;\r\n  font-size: 15px;\r\n  font-weight: 600;\r\n  color: #111827;\r\n}\r\n\r\n.room-subject {\r\n  margin: 0;\r\n  font-size: 12px;\r\n  color: #6b7280;\r\n}\r\n\r\n.room-examiner {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 6px;\r\n  font-size: 12px;\r\n  color: #374151;\r\n  margin-top: 6px;\r\n}\r\n\r\n.room-examiner-icon {\r\n  width: 20px;\r\n  height: 20px;\r\n  border-radius: 999px;\r\n  background: #e5e7eb;\r\n  display: inline-flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.room-card-footer {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  font-size: 12px;\r\n  color: #6b7280;\r\n}\r\n\r\n.room-time {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  gap: 4px;\r\n}\r\n\r\n.room-count {\r\n  font-weight: 600;\r\n}\r\n\r\n.overview-right section {\r\n  background: #f9fafb;\r\n  border-radius: 16px;\r\n  border: 1px solid #e5e7eb;\r\n  padding: 16px 16px 14px;\r\n}\r\n\r\n.overview-right section + section {\r\n  margin-top: 16px;\r\n}\r\n\r\n.time-control-body {\r\n  display: grid;\r\n  gap: 12px;\r\n}\r\n\r\n.time-circle {\r\n  width: 160px;\r\n  height: 160px;\r\n  border-radius: 999px;\r\n  border: 10px solid #e5e7eb;\r\n  border-top-color: #38bdf8;\r\n  border-right-color: #38bdf8;\r\n  display: grid;\r\n  place-items: center;\r\n  margin: 8px auto 4px;\r\n}\r\n\r\n.time-circle-inner {\r\n  width: 120px;\r\n  height: 120px;\r\n  border-radius: 999px;\r\n  background: #ffffff;\r\n  display: grid;\r\n  place-items: center;\r\n  text-align: center;\r\n}\r\n\r\n.time-main {\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  color: #111827;\r\n}\r\n\r\n.time-sub {\r\n  font-size: 12px;\r\n  color: #6b7280;\r\n}\r\n\r\n.primary-button {\r\n  border: none;\r\n  border-radius: 999px;\r\n  padding: 10px 16px;\r\n  background: #2563eb;\r\n  color: #ffffff;\r\n  font-size: 14px;\r\n  font-weight: 600;\r\n  cursor: pointer;\r\n}\r\n\r\n.primary-button:hover {\r\n  background: #1d4ed8;\r\n}\r\n\r\n.full-width {\r\n  width: 100%;\r\n}\r\n\r\n.time-meta {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  font-size: 12px;\r\n  color: #6b7280;\r\n}\r\n\r\n.recent-exams-list {\r\n  list-style: none;\r\n  margin: 0;\r\n  padding: 0;\r\n  display: grid;\r\n  gap: 10px;\r\n}\r\n\r\n.recent-exam-title {\r\n  font-size: 14px;\r\n  font-weight: 600;\r\n  color: #111827;\r\n}\r\n\r\n.recent-exam-meta {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  font-size: 12px;\r\n  color: #6b7280;\r\n}\r\n\r\n.tag {\r\n  padding: 3px 8px;\r\n  border-radius: 999px;\r\n  font-size: 11px;\r\n  font-weight: 600;\r\n}\r\n\r\n.tag-success {\r\n  background: #dcfce7;\r\n  color: #166534;\r\n}\r\n\r\n.tag-info {\r\n  background: #e0f2fe;\r\n  color: #1d4ed8;\r\n}\r\n\r\n@media (max-width: 900px) {\r\n  .dashboard-page {\r\n    grid-template-columns: 1fr;\r\n  }\r\n\r\n  .dashboard-sidebar {\r\n    flex-direction: row;\r\n    align-items: center;\r\n    flex-wrap: wrap;\r\n    justify-content: space-between;\r\n  }\r\n\r\n  .sidebar-nav {\r\n    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));\r\n  }\r\n\r\n  .overview-metrics {\r\n    grid-template-columns: repeat(2, minmax(0, 1fr));\r\n  }\r\n\r\n  .overview-layout {\r\n    grid-template-columns: 1fr;\r\n  }\r\n\r\n  .room-grid {\r\n    grid-template-columns: repeat(2, minmax(0, 1fr));\r\n  }\r\n}\r\n\r\n@media (max-width: 640px) {\r\n  .room-grid {\r\n    grid-template-columns: 1fr;\r\n  }\r\n}
+===================================================================
+diff --git a/react-app/frontend/src/styles/dashboard.css b/react-app/frontend/src/styles/dashboard.css
+--- a/react-app/frontend/src/styles/dashboard.css	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ b/react-app/frontend/src/styles/dashboard.css	(date 1773197580488)
+@@ -1,5 +1,5 @@
+ .dashboard-home-greeting h2 {
+-  font-family: 'Roboto', sans-serif;
++  font-family: var(--font-sans);
+   font-size: 64px;
+   font-weight: 600;
+   color: #1f2937;
+Index: react-app/frontend/src/styles/studentlist.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n:root{\r\n  --primary: #1e88e5; /* match schedule primary */\r\n  --muted: #f5f9ff;\r\n  --accent: #1e88e5;\r\n  --danger: #ff6b6b;\r\n  --text: #2b2b2b;\r\n}\r\n\r\n.student-list-page{\r\n  padding: 16px 20px;\r\n  font-family: \"Segoe UI\", Roboto, Arial, sans-serif;\r\n  color: var(--text);\r\n  background: transparent;\r\n}\r\n\r\n.student-header{\r\n  display:flex;\r\n  align-items:center;\r\n  justify-content:space-between;\r\n  flex-wrap:wrap;\r\n  gap:16px;\r\n  margin-bottom:20px;\r\n}\r\n\r\n.pill{\r\n\tpadding:8px 14px;\r\n\tborder-radius:18px;\r\n\tbackground:var(--muted);\r\n\tcolor:var(--primary);\r\n\tborder:none;\r\n\tfont-weight:600;\r\n}\r\n\r\n.header-actions{\r\n    display:flex;\r\n    align-items:center\r\n}\r\n.header-actions .btn{\r\n    margin-left:8px\r\n}\r\n\r\n.import-info{\r\n  background:#e3f2fd;\r\n  color:var(--primary);\r\n  padding:8px 12px;\r\n  border-radius:6px;\r\n  font-size:13px;\r\n  margin-left:12px;\r\n}\r\n\r\n.recent-files{\r\n  background:#f5f9ff;\r\n  padding:12px 14px;\r\n  border-radius:8px;\r\n  margin-bottom:16px;\r\n  border-left:\r\n  4px solid var(--primary)\r\n}\r\n.recent-title{\r\n    font-weight:700;\r\n    font-size:13px;\r\n    margin-bottom:8px;\r\n    color:var(--text)\r\n}\r\n.recent-list{\r\n    display:flex;\r\n    gap:8px;\r\n    flex-wrap:wrap\r\n}\r\n.recent-file-btn{\r\n    background:#fff;\r\n    border:1px solid #d8e6ef;\r\n    padding:6px 10px;\r\n    border-radius:6px;\r\n    cursor:pointer;\r\n    font-size:12px;\r\n    transition:all 0.2s\r\n}\r\n.recent-file-btn:hover{\r\n    background:var(--primary);\r\n    color:#fff;\r\n    border-color:var(--primary)\r\n}\r\n\r\n.btn{\r\n  display:inline-flex;\r\n  align-items:center;\r\n  justify-content:center;\r\n  background:#fff;\r\n  border:1px solid var(--primary);\r\n  padding:8px 10px;\r\n  border-radius:6px;\r\n  color:var(--primary);\r\n  cursor:pointer;\r\n  font-size:13px;\r\n  transition: background 0.2s, color 0.2s;\r\n}\r\n\r\n.btn:hover{\r\n  background: var(--primary);\r\n  color: #fff;\r\n}\r\n.btn.small{\r\n    padding:6px 10px;\r\n    font-size:13px\r\n}\r\n\r\n.import-notice{\r\n    text-align: center;\r\n    margin: 16px 0;\r\n    padding: 12px;\r\n    background: #e3f2fd;\r\n    border-radius: 4px;\r\n    color: var(--primary);\r\n    font-weight: 500;\r\n}\r\n.btn.tiny{\r\n    padding:4px 8px;\r\n    font-size:12px\r\n}\r\n.btn.primary{\r\n    background:var(--primary);\r\n    color:#fff;\r\n    border:0;\r\n}\r\n\r\n.btn.danger{\r\n    background:var(--danger);\r\n    color:#fff;\r\n    border:0;\r\n}\r\n.btn.danger{\r\n    background:var(--danger);\r\n    color:#fff;\r\n    border:0\r\n}\r\n\r\n.student-search .search-box{\r\n\tbackground:#e9f8ff;\r\n    padding:14px;\r\n    border-radius:12px;\r\n    display:flex;gap:12px;\r\n    align-items:center;\r\n    flex-wrap:wrap;\r\n    margin-bottom:16px\r\n}\r\n.search-row{\r\n    display:flex;\r\n    align-items:center;\r\n    gap:8px\r\n}\r\n.search-row label{\r\n    min-width:70px;\r\n    font-weight:600\r\n}\r\n.search-row input, .search-row select{\r\n    padding:8px;\r\n    border-radius:6px;\r\n    border:1px solid #d8e6ef;\r\n    min-width:140px;\r\n    background:#fff;\r\n    color:var(--text);\r\n    cursor:pointer\r\n}\r\n\r\n.student-table-wrap{\r\n    background:#fff;\r\n    border-radius:8px;\r\n    padding:0;\r\n    border:1px solid #e0e0e0;\r\n    max-height: 65vh; \r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n    margin-bottom:16px;\r\n}\r\n.student-table{\r\n    width:100%;\r\n    border-collapse:collapse;\r\n    font-size:15px\r\n}\r\n.student-table thead th{\r\n    background:var(--primary);\r\n    color:#fff;\r\n    padding:12px 14px;\r\n    font-weight:600;\r\n    text-align:left;\r\n}\r\n.student-table th,\r\n.student-table td{\r\n    padding:14px 20px;   \r\n    border-bottom:1px solid #eee;\r\n}\r\n.student-table tbody tr:hover{\r\n    background:#f9f9f9;\r\n}\r\n.student-table .empty{\r\n    padding:28px;\r\n    text-align:center;\r\n    color:#777\r\n}\r\n\r\n\r\n@media (max-width:900px){\r\n\t.student-header{\r\n        flex-direction:column;\r\n        align-items:stretch\r\n    }\r\n\t.header-actions{\r\n        justify-content:flex-start;\r\n        margin-top:8px\r\n    }\r\n\t.student-search .search-box{\r\n        flex-direction:column;\r\n        align-items:stretch\r\n    }\r\n\t.search-row{\r\n        width:100%\r\n    }\r\n\t.search-row label{\r\n        min-width:unset\r\n    }\r\n}\r\n\r\n@media (max-width:600px){\r\n\t.student-table thead th{\r\n        font-size:12px;\r\n        padding:8px\r\n    }\r\n\t.student-table td{\r\n        font-size:13px;\r\n        padding:8px\r\n    }\r\n\t.pill{\r\n        font-size:13px;\r\n        padding:6px 10px\r\n    }\r\n}\r\n\r\n.toast-notice {\r\n  position: fixed;\r\n  top: 20px;\r\n  right: 20px;\r\n  background: #1e88e5;\r\n  color: #fff;\r\n  padding: 12px 18px;\r\n  border-radius: 8px;\r\n  font-size: 14px;\r\n  box-shadow: 0 6px 20px rgba(0,0,0,0.15);\r\n  animation: slideIn 0.3s ease;\r\n  z-index: 9999;\r\n}\r\n\r\n@keyframes slideIn {\r\n  from {\r\n    opacity: 0;\r\n    transform: translateY(-10px);\r\n  }\r\n  to {\r\n    opacity: 1;\r\n    transform: translateY(0);\r\n  }\r\n}\r\n
+===================================================================
+diff --git a/react-app/frontend/src/styles/studentlist.css b/react-app/frontend/src/styles/studentlist.css
+--- a/react-app/frontend/src/styles/studentlist.css	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ b/react-app/frontend/src/styles/studentlist.css	(date 1773197580618)
+@@ -9,7 +9,7 @@
+ 
+ .student-list-page{
+   padding: 16px 20px;
+-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
++  font-family: var(--font-sans);
+   color: var(--text);
+   background: transparent;
+ }
+Index: react-app/frontend/src/styles/global.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n  height: 100%;\r\n  width: 100%;\r\n}\r\n\r\n:root {\r\n  color-scheme: light;\r\n  --font-sans: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;\r\n}\r\n\r\nbody {\r\n  font-family: var(--font-sans);\r\n  background: #f4f6f9;\r\n  color: #111827;\r\n  line-height: 1.5;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n\r\n#root {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n}\r\n\r\nbutton,\r\ninput,\r\ntextarea,\r\nselect {\r\n  font-family: inherit;\r\n}\r\n\r\n:focus-visible {\r\n  outline: 2px solid rgba(79, 124, 255, 0.35);\r\n  outline-offset: 2px;\r\n}\r\n/* Dashboard styles moved to dashboard.css */\r\n.page-placeholder {\r\n  width: 100%;\r\n  min-width: 0;\r\n  background: #ffffff;\r\n  border: 1px solid #e5e7eb;\r\n  border-radius: 12px;\r\n  padding: 20px;\r\n  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);\r\n  font-size: 16px;\r\n  font-weight: 600;\r\n  color: #1f2937;\r\n}
+===================================================================
+diff --git a/react-app/frontend/src/styles/global.css b/react-app/frontend/src/styles/global.css
+--- a/react-app/frontend/src/styles/global.css	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ b/react-app/frontend/src/styles/global.css	(date 1773197578845)
+@@ -12,7 +12,7 @@
+ 
+ :root {
+   color-scheme: light;
+-  --font-sans: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
++  --font-sans: 'Be Vietnam Pro', 'Segoe UI', system-ui, -apple-system, sans-serif;
+ }
+ 
+ body {
+@@ -40,7 +40,7 @@
+   font-family: inherit;
+ }
+ 
+-:focus-visible {
++::focus-visible {
+   outline: 2px solid rgba(79, 124, 255, 0.35);
+   outline-offset: 2px;
+ }
+@@ -56,4 +56,5 @@
+   font-size: 16px;
+   font-weight: 600;
+   color: #1f2937;
+-}
+\ No newline at end of file
++}
++

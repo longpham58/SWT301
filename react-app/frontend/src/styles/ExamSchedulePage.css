@@ -1,0 +1,275 @@
+/* Exam Schedule – trang xác nhận bản nháp từ Setup Exam */
+.exam-schedule-page {
+  padding: 0;
+  max-width: 100%;
+}
+
+.schedule-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.schedule-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.schedule-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-setup-exam,
+.btn-export {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-setup-exam {
+  background: #1e88e5;
+  color: white;
+}
+
+.btn-setup-exam:hover {
+  background: #1565c0;
+  color: white;
+}
+
+.btn-export {
+  background: #fff;
+  color: #1e88e5;
+  border: 1px solid #1e88e5;
+}
+
+.btn-export:hover {
+  background: #e3f2fd;
+}
+
+/* Search */
+.schedule-search {
+  margin-bottom: 16px;
+}
+
+.search-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.1);
+}
+
+/* Filters */
+.schedule-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+}
+
+.filter-select,
+.filter-date {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #fff;
+}
+
+.filter-select:focus,
+.filter-date:focus {
+  outline: none;
+  border-color: #1e88e5;
+}
+
+/* Table */
+.schedule-table-wrap {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 16px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.schedule-table thead {
+  background: #1e88e5;
+  color: white;
+}
+
+.schedule-table th {
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.schedule-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.schedule-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.schedule-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.status-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 120px;
+  background: #fff;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #1e88e5;
+}
+
+.status-select.status-nhap {
+  background: #fff3e0;
+  border-color: #ffb74d;
+  color: #e65100;
+}
+
+.status-select.status-scheduled {
+  background: #e3f2fd;
+  border-color: #64b5f6;
+  color: #1565c0;
+}
+
+.status-select.status-done {
+  background: #e8f5e9;
+  border-color: #81c784;
+  color: #2e7d32;
+}
+
+.status-select.status-running {
+  background: #e8eaf6;
+  border-color: #7986cb;
+  color: #303f9f;
+}
+
+.status-select.status-locked {
+  background: #fce4ec;
+  border-color: #f48fb1;
+  color: #c2185b;
+}
+
+.schedule-actions-cell {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-edit-schedule,
+.btn-delete-schedule {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-edit-schedule {
+  background: #e3f2fd;
+  color: #1565c0;
+  border-color: #64b5f6;
+}
+
+.btn-edit-schedule:hover:not(:disabled) {
+  background: #bbdefb;
+}
+
+.btn-edit-schedule:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-delete-schedule {
+  background: #ffebee;
+  color: #c62828;
+  border-color: #e57373;
+}
+
+.btn-delete-schedule:hover {
+  background: #ffcdd2;
+}
+
+.schedule-hint {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .schedule-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .schedule-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .schedule-table-wrap {
+    overflow-x: auto;
+  }
+
+  .schedule-table {
+    min-width: 700px;
+  }
+}

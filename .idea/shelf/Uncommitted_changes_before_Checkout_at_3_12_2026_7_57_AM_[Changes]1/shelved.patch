@@ -1,0 +1,145 @@
+Index: LICENSE
+===================================================================
+diff --git a/LICENSE b/LICENSE
+deleted file mode 100644
+--- a/LICENSE	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ /dev/null	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
+@@ -1,21 +0,0 @@
+-MIT License
+-
+-Copyright (c) 2026 cuongpq-dev
+-
+-Permission is hereby granted, free of charge, to any person obtaining a copy
+-of this software and associated documentation files (the "Software"), to deal
+-in the Software without restriction, including without limitation the rights
+-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-copies of the Software, and to permit persons to whom the Software is
+-furnished to do so, subject to the following conditions:
+-
+-The above copyright notice and this permission notice shall be included in all
+-copies or substantial portions of the Software.
+-
+-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-SOFTWARE.
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ /dev/null	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/OSCE.iml" filepath="$PROJECT_DIR$/.idea/OSCE.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: react-app/public/logo.svg
+===================================================================
+diff --git a/react-app/public/logo.svg b/react-app/public/logo.svg
+deleted file mode 100644
+--- a/react-app/public/logo.svg	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ /dev/null	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
+@@ -1,4 +0,0 @@
+-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+-  <circle cx="12" cy="12" r="10"/>
+-  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+-</svg>
+Index: Solution1.ssmssln
+===================================================================
+diff --git a/Solution1.ssmssln b/Solution1.ssmssln
+deleted file mode 100644
+--- a/Solution1.ssmssln	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
++++ /dev/null	(revision 0aa2d4053d9fa6095a21cb8e666d368c7ee0dd6b)
+@@ -1,19 +0,0 @@
+-
+-Microsoft Visual Studio Solution File, Format Version 12.00
+-# SQL Server Management Studio Solution File, Format Version 20.00
+-VisualStudioVersion = 15.0.28307.421
+-MinimumVisualStudioVersion = 10.0.40219.1
+-Global
+-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+-		Default|Default = Default|Default
+-	EndGlobalSection
+-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+-		{C1396D71-8677-4831-ADC3-AD98727E62EA}.Default|Default.ActiveCfg = Default
+-	EndGlobalSection
+-	GlobalSection(SolutionProperties) = preSolution
+-		HideSolutionNode = FALSE
+-	EndGlobalSection
+-	GlobalSection(ExtensibilityGlobals) = postSolution
+-		SolutionGuid = {51227571-195A-4661-A1B7-A7AD2417B041}
+-	EndGlobalSection
+-EndGlobal
+Index: .idea/encodings.xml
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1773200245428)
++++ b/.idea/encodings.xml	(date 1773200245428)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/selenium-tests/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/selenium-tests/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1773200245438)
++++ b/.idea/jarRepositories.xml	(date 1773200245438)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/compiler.xml
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1773201605781)
++++ b/.idea/compiler.xml	(date 1773201605781)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="Test" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
